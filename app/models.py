@@ -68,7 +68,7 @@ class Emprestimo(models.Model):
     dataemprestimo= models.DateField()
     datedevolucao= models.DateField()
     usuario= models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    livro= models.ForeignKey(livro, on_delete=models.CASCADE)
+    livro= models.ForeignKey(Livro, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural ="Emprestimo"
