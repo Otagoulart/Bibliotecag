@@ -48,12 +48,12 @@ class GeneroView(View):
 
 class LivroView(View):
     def get(self, request):
-        livro = Livro.objects.all()
-        return render(request, 'livro.html',{'livro':livro})
+        livros = Livro.objects.all()
+        return render(request, 'livro.html',{'livros':livros})
     def post(self, request):
         pass
 
-class UsuaroView(View):
+class UsuarioView(View):
     def get(self, request):
         usuario = Usuario.objects.all()
         return render(request, 'usuario.html',{'usuario':usuario})
